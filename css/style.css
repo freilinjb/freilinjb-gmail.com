@@ -9,5 +9,6 @@
 
 .cuadro {
     height: 40px;
-    padding: 3px;
+    padding: 8px;
+    font-weight: 500;
 }

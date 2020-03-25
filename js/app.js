@@ -1,7 +1,10 @@
 //Variables
 const presupuestoUsuario = prompt('Cual es tu presupuesto semanal?',55);
 let cantidadPresupuesto;
-
+const formulario = document.getElementById('calcularGastos');
+formulario.addEventListener('submit', function(e) {
+    e.preventDefault();
+});
 //Classes
 class Presupuesto {
     constructor(presupuesto) {
@@ -18,7 +21,14 @@ class Presupuesto {
 //Clase interfaz maneja todo los relacionado al HTML
 class Interfaz {
     insertarPresupuesto(cantidad) {
-        console.log(`Cantidad: ${cantidad}`); 
+
+    const presupuestoSpan = document.querySelector('span#total');
+    const restanteSpan = document.querySelector('span#restante');
+
+    //Insertar al HTML
+    presupuestoSpan.innerHTML = `RD$ ${cantidad}`;
+    restanteSpan.innerHTML = `RD$ ${cantidad}`;
+
         
     }
 }
