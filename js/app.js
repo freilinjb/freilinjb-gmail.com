@@ -1,5 +1,5 @@
 //Variables
-const presupuestoUsuario = prompt('Cual es tu presupuesto semanal?');
+const presupuestoUsuario = prompt('Cual es tu presupuesto semanal?',55);
 let cantidadPresupuesto;
 
 //Classes
@@ -18,7 +18,7 @@ class Presupuesto {
 //Clase interfaz maneja todo los relacionado al HTML
 class Interfaz {
     insertarPresupuesto(cantidad) {
-        console.log(`Cantidad: ${cantidad}`);
+        console.log(`Cantidad: ${cantidad}`); 
         
     }
 }
