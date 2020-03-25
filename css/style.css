@@ -1,0 +1,13 @@
+.sinpadding [class*="col-"] {
+    padding: 0;
+}
+
+.cuadroTarea {
+    margin-top: 10px;
+}
+
+
+.cuadro {
+    height: 40px;
+    padding: 3px;
+}
