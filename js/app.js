@@ -29,6 +29,23 @@ class Interfaz {
 
         
     }
+
+    imprimirMensaje(mensaje, tipo) {
+        const divMensaje = document.createElement('div');
+        divMensaje.classList.add('text-center', 'alert');
+
+        if(tipo === 'error') {
+            divMensaje.classList.add('alert-danger');
+        } else {
+            divMensaje.classList.add('alert-success');
+        }
+        // crea un div y le agrerga el mensaje 
+        divMensaje.appendChild(document.createTextNode(mensaje));
+        
+        //Insertar en el DOM         ELEMENTOS QUE VAS A INSERTAR Y Y EL SEGUNDO ANTES DE DONDE 
+        document.querySelector('.primario').insertBefore(divMensaje, formulario);
+
+    }
 }
 
 //EventListener
@@ -55,7 +72,8 @@ formulario.addEventListener('submit', function(e) {
     const ui = new Interfaz();
 
     if(gastoGasto === '' || cantidadGasto === '') {
-        console.log('Hubo un error');
+        // 2 marametros: mensaje y tipo
+        ui.imprimirMensaje('Hubo un error','error');
         
     } else {
         console.log('El gasto se agrego');
