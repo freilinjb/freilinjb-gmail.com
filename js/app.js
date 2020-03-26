@@ -1,5 +1,6 @@
-//Variables
+//Variables globales
 const presupuestoUsuario = prompt('Cual es tu presupuesto semanal?',55);
+
 let cantidadPresupuesto;
 const formulario = document.getElementById('agregar-gastos');
 
@@ -42,6 +43,7 @@ class Interfaz {
         // crea un div y le agrerga el mensaje 
         divMensaje.appendChild(document.createTextNode(mensaje));
         
+         
         //Insertar en el DOM         ELEMENTOS QUE VAS A INSERTAR Y Y EL SEGUNDO ANTES DE DONDE 
         document.querySelector('.primario').insertBefore(divMensaje, formulario);
 
@@ -72,12 +74,15 @@ class Interfaz {
     //Comprueba el presupuesto restante
     presupuestoRestante(cantidad) {
         // console.log(`Cantidad presupuesto: ${cantidad}`);
-        const restante = document.querySelector('span#restante');
+        const restante = document.querySelector('span#restante ');
+        console.log(restante);
+        
         //Leemos el presupuesto restante
 
         const presupuestoRestante = cantidadPresupuesto.presupuestoRestante(cantidad);
 
-        console.log(`presupuesto Restante: ${presupuestoRestante}`);
+        // console.log(`presupuesto Restante: ${presupuestoRestante}`);
+        restante.innerHTML = `${presupuestoRestante}`;
         
      }
 }
