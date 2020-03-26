@@ -45,6 +45,13 @@ class Interfaz {
         //Insertar en el DOM         ELEMENTOS QUE VAS A INSERTAR Y Y EL SEGUNDO ANTES DE DONDE 
         document.querySelector('.primario').insertBefore(divMensaje, formulario);
 
+
+        //Quitar el alert despues de 3 segundos
+        setTimeout(function() {
+            document.querySelector('.primario .alert').remove();
+            formulario.reset();
+        }, 3000);
+
     }
 }
 
@@ -76,7 +83,7 @@ formulario.addEventListener('submit', function(e) {
         ui.imprimirMensaje('Hubo un error','error');
         
     } else {
-        console.log('El gasto se agrego');
+        ui.imprimirMensaje('Todo correcto','correcto');
         
     }
     
