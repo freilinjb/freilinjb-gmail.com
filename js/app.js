@@ -88,8 +88,21 @@ class Interfaz {
      }
 
      comprobarPresupueso() {
-         console.log(cantidadPresupuesto);
-         
+        //  console.log(cantidadPresupuesto);
+         const presupuestoTotal = cantidadPresupuesto.presupuesto;
+         const presupuestoRestante = cantidadPresupuesto.restante;
+
+         //Comprobar el 25% del gasto
+        if((presupuestoTotal/4) > presupuestoRestante) {
+            const restante = document.querySelector('.restante');
+            restante.classList.remove('alert-success', 'alert-warning');
+            restante.classList.add('alert-danger');
+
+        } else  if((presupuestoTotal/2) > presupuestoRestante) {
+            const restante = document.querySelector('.restante');
+            restante.classList.remove('alert-success', 'alert-warning');
+            restante.classList.add('alert-warning');
+        }
      }
      ///Cambiar de color el presupuesto restante
 }
