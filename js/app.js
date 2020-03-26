@@ -48,9 +48,18 @@ document.addEventListener('DOMContentLoaded', function() {
 formulario.addEventListener('submit', function(e) {
     e.preventDefault();
 
+    //Leer del formulario de Gastos
     const gastoGasto = document.querySelector('#gastos').value;
     const cantidadGasto = document.querySelector('#cantidad').value;
 
-    console.log(`Gastos: ${gastoGasto}\nCantidad: ${cantidadGasto}`);
+    const ui = new Interfaz();
+
+    if(gastoGasto === '' || cantidadGasto === '') {
+        console.log('Hubo un error');
+        
+    } else {
+        console.log('El gasto se agrego');
+        
+    }
     
 });
