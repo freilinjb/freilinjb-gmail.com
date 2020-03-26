@@ -63,7 +63,7 @@ class Interfaz {
 
         li.innerHTML = `
             ${nombre}
-            $ ${cantidad}
+           <span class="badge badge-primary badge-pill">  $ ${cantidad}</span>
         `;
 
         //Insertar al HTML
