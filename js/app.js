@@ -75,7 +75,6 @@ class Interfaz {
     presupuestoRestante(cantidad) {
         // console.log(`Cantidad presupuesto: ${cantidad}`);
         const restante = document.querySelector('span#restante ');
-        console.log(restante);
         
         //Leemos el presupuesto restante
 
@@ -83,8 +82,16 @@ class Interfaz {
 
         // console.log(`presupuesto Restante: ${presupuestoRestante}`);
         restante.innerHTML = `${presupuestoRestante}`;
+ 
+        this.comprobarPresupueso();
         
      }
+
+     comprobarPresupueso() {
+         console.log(cantidadPresupuesto);
+         
+     }
+     ///Cambiar de color el presupuesto restante
 }
 
 //EventListener
